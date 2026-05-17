@@ -24,7 +24,7 @@ class BloodDonationApp extends ConsumerWidget {
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      themeMode: ThemeMode.system, // Supports dark mode automatically
+      themeMode: ThemeMode.system,
       routerConfig: router,
     );
   }

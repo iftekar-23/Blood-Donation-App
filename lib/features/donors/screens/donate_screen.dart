@@ -25,7 +25,7 @@ class _DonateScreenState extends ConsumerState<DonateScreen> {
       await ref
           .read(donorServiceProvider)
           .setAvailability(uid, !current);
-      // Refresh profile
+
       ref.invalidate(currentUserProfileProvider);
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -85,7 +85,7 @@ class _DonateScreenState extends ConsumerState<DonateScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Status card
+
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.all(24),
@@ -131,7 +131,7 @@ class _DonateScreenState extends ConsumerState<DonateScreen> {
                 ),
                 const SizedBox(height: 24),
 
-                // Donor info card
+
                 Card(
                   child: Padding(
                     padding: const EdgeInsets.all(16),
@@ -153,7 +153,7 @@ class _DonateScreenState extends ConsumerState<DonateScreen> {
                 ),
                 const SizedBox(height: 24),
 
-                // Tips
+
                 const Text('Donation Tips',
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),

@@ -1,14 +1,7 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'profile_provider.dart';
-
-// **************************************************************************
-// RiverpodGenerator
-// **************************************************************************
-
 String _$profileServiceHash() => r'profileServiceHash';
 
-/// See also [profileService].
 @ProviderFor(profileService)
 final profileServiceProvider = AutoDisposeProvider<ProfileService>.internal(
   profileService,

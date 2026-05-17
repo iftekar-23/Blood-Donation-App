@@ -10,17 +10,15 @@ part 'auth_service.g.dart';
 @riverpod
 AuthService authService(AuthServiceRef ref) => AuthService();
 
-/// Handles Firebase Authentication and user Firestore operations
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseFirestore _db = FirebaseFirestore.instance;
 
-  /// Sign in with email and password
+
   Future<UserCredential> signIn(String email, String password) async {
     return _auth.signInWithEmailAndPassword(email: email, password: password);
   }
 
-  /// Register new user and store profile in Firestore
   Future<UserModel> register({
     required String name,
     required String email,
@@ -52,10 +50,9 @@ class AuthService {
     return user;
   }
 
-  /// Sign out current user
   Future<void> signOut() => _auth.signOut();
 
-  /// Fetch user profile from Firestore
+
   Future<UserModel?> getUserProfile(String uid) async {
     final doc = await _db
         .collection(AppConstants.usersCollection)
@@ -65,7 +62,6 @@ class AuthService {
     return UserModel.fromDoc(doc);
   }
 
-  /// Update user profile fields in Firestore
   Future<void> updateProfile(String uid, Map<String, dynamic> data) async {
     await _db
         .collection(AppConstants.usersCollection)
@@ -73,9 +69,7 @@ class AuthService {
         .update(data);
   }
 
-  /// Stream of auth state changes
   Stream<User?> get authStateChanges => _auth.authStateChanges();
 
-  /// Current logged-in Firebase user
   User? get currentUser => _auth.currentUser;
 }

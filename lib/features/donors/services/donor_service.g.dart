@@ -1,14 +1,7 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
-
 part of 'donor_service.dart';
-
-// **************************************************************************
-// RiverpodGenerator
-// **************************************************************************
 
 String _$donorServiceHash() => r'donorServiceHash';
 
-/// See also [donorService].
 @ProviderFor(donorService)
 final donorServiceProvider = AutoDisposeProvider<DonorService>.internal(
   donorService,

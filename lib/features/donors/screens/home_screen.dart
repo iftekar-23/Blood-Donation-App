@@ -32,7 +32,7 @@ class HomeScreen extends ConsumerWidget {
       drawer: const AppDrawer(),
       body: Column(
         children: [
-          // Header banner
+
           Container(
             width: double.infinity,
             padding: const EdgeInsets.fromLTRB(20, 16, 20, 20),
@@ -64,7 +64,6 @@ class HomeScreen extends ConsumerWidget {
                 ),
                 const SizedBox(height: 16),
 
-                // Blood group filter dropdown
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 14),
                   decoration: BoxDecoration(

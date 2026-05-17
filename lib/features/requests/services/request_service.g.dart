@@ -1,14 +1,8 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'request_service.dart';
 
-// **************************************************************************
-// RiverpodGenerator
-// **************************************************************************
-
 String _$requestServiceHash() => r'requestServiceHash';
 
-/// See also [requestService].
 @ProviderFor(requestService)
 final requestServiceProvider = AutoDisposeProvider<RequestService>.internal(
   requestService,

@@ -15,7 +15,7 @@ import '../../features/donors/screens/donate_screen.dart';
 
 part 'app_router.g.dart';
 
-/// Route path constants
+
 class AppRoutes {
   static const splash = '/';
   static const signIn = '/sign-in';
@@ -39,13 +39,8 @@ GoRouter appRouter(AppRouterRef ref) {
       final isAuthRoute = state.matchedLocation == AppRoutes.signIn ||
           state.matchedLocation == AppRoutes.register;
 
-      // Let splash handle its own navigation
       if (isSplash) return null;
 
-      // Not logged in → go to sign in
-      if (!isLoggedIn && !isAuthRoute) return AppRoutes.signIn;
-
-      // Already logged in → skip auth pages
       if (isLoggedIn && isAuthRoute) return AppRoutes.home;
 
       return null;

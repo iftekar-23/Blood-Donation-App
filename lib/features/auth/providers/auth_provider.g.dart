@@ -1,14 +1,6 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
-
 part of 'auth_provider.dart';
-
-// **************************************************************************
-// RiverpodGenerator
-// **************************************************************************
-
 String _$authStateHash() => r'authStateHash';
 
-/// See also [authState].
 @ProviderFor(authState)
 final authStateProvider = AutoDisposeStreamProvider<User?>.internal(
   authState,
@@ -23,7 +15,6 @@ typedef AuthStateRef = AutoDisposeStreamProviderRef<User?>;
 
 String _$currentUserProfileHash() => r'currentUserProfileHash';
 
-/// See also [currentUserProfile].
 @ProviderFor(currentUserProfile)
 final currentUserProfileProvider =
     AutoDisposeFutureProvider<UserModel?>.internal(

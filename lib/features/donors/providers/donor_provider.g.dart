@@ -1,14 +1,6 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
-
 part of 'donor_provider.dart';
-
-// **************************************************************************
-// RiverpodGenerator
-// **************************************************************************
-
 String _$filteredDonorsHash() => r'filteredDonorsHash';
 
-/// See also [filteredDonors].
 @ProviderFor(filteredDonors)
 final filteredDonorsAsync = AutoDisposeStreamProvider<List<UserModel>>.internal(
   filteredDonors,
@@ -24,7 +16,6 @@ typedef FilteredDonorsRef = AutoDisposeStreamProviderRef<List<UserModel>>;
 
 String _$bloodGroupFilterHash() => r'bloodGroupFilterHash';
 
-/// See also [BloodGroupFilter].
 @ProviderFor(BloodGroupFilter)
 final bloodGroupFilterProvider =
     AutoDisposeNotifierProvider<BloodGroupFilter, String>.internal(

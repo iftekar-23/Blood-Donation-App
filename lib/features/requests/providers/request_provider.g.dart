@@ -1,14 +1,8 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'request_provider.dart';
 
-// **************************************************************************
-// RiverpodGenerator
-// **************************************************************************
-
 String _$allRequestsHash() => r'allRequestsHash';
 
-/// See also [allRequests].
 @ProviderFor(allRequests)
 final allRequestsProvider =
     AutoDisposeStreamProvider<List<BloodRequestModel>>.internal(
@@ -24,7 +18,6 @@ typedef AllRequestsRef = AutoDisposeStreamProviderRef<List<BloodRequestModel>>;
 
 String _$myRequestsHash() => r'myRequestsHash';
 
-/// See also [myRequests].
 @ProviderFor(myRequests)
 final myRequestsProvider =
     AutoDisposeStreamProvider<List<BloodRequestModel>>.internal(

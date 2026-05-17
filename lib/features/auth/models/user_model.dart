@@ -1,16 +1,16 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-/// Represents a registered user in the system
+
 class UserModel {
   final String uid;
   final String name;
   final String email;
   final String phone;
   final String bloodGroup;
-  final String role; // 'Donor' or 'Receiver'
+  final String role;
   final String? photoUrl;
   final String? location;
-  final bool isAvailable; // for donors: available to donate
+  final bool isAvailable;
   final DateTime createdAt;
 
   const UserModel({

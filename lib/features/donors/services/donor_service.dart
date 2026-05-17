@@ -9,11 +9,9 @@ part 'donor_service.g.dart';
 @riverpod
 DonorService donorService(DonorServiceRef ref) => DonorService();
 
-/// Service for querying donor data from Firestore
 class DonorService {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
 
-  /// Stream of all donors, optionally filtered by blood group
   Stream<List<UserModel>> donorsStream({String? bloodGroup}) {
     Query<Map<String, dynamic>> query = _db
         .collection(AppConstants.usersCollection)
@@ -31,7 +29,7 @@ class DonorService {
         );
   }
 
-  /// Toggle donor availability status
+
   Future<void> setAvailability(String uid, bool available) async {
     await _db
         .collection(AppConstants.usersCollection)

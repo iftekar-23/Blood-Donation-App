@@ -6,14 +6,12 @@ import '../models/blood_request_model.dart';
 import '../services/request_service.dart';
 
 part 'request_provider.g.dart';
-
-/// Stream of all pending blood requests
 @riverpod
 Stream<List<BloodRequestModel>> allRequests(AllRequestsRef ref) {
   return ref.read(requestServiceProvider).allRequestsStream();
 }
 
-/// Stream of current user's blood requests
+
 @riverpod
 Stream<List<BloodRequestModel>> myRequests(MyRequestsRef ref) {
   final uid = ref.read(authServiceProvider).currentUser?.uid;
